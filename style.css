@@ -20,6 +20,7 @@ nav {
 }
 
 .logo {
+  margin-top: 10px;
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
@@ -34,14 +35,24 @@ nav a {
   font-weight: 600;
 }
 
-.hero-container {
+.hero-container,
+.about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 90vh;
-  padding: 3rem calc((100vw - 1300px) / 2);
+  padding: 3rem calc((80vw - 1300px) / 2);
 }
 
-.column-left {
+.about-text {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.column-left,
+.about-column-left,
+.footer-column-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,21 +67,35 @@ nav a {
 }
 
 .column-left p {
+  max-width: 600px;
   margin-bottom: 2rem;
   font-size: 1rem;
   line-height: 1.5;
 }
-button {
-  padding: 1rem 3rem;
+
+.hero-btn {
+  padding: 0.7rem 2rem;
   font-size: 1rem;
   border: none;
-  color: #fff;
+  color: #f7f7f7;
   background: #06225f;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
-.column-right {
+.btn {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #06225f;
+  background: #fff;
+  border: 1px solid #06225f;
+  cursor: pointer;
+}
+
+.column-right .about-column-right,
+.footer-column-right {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,11 +103,111 @@ button {
 }
 
 .hero-image {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 
-@media screen and (max-width: 768px) {
+.resize img {
+  margin: 0 1rem;
+  width: 10%;
+  height: auto;
+}
+
+.contact-container {
+  height: 50vh;
+}
+
+.form-container {
+  position: relative;
+  margin: auto;
+  width: 50em;
+  height: 40vh;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+
+.name-input {
+  padding: 10px;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.email-input {
+  padding: 10px;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.msg-btn {
+  padding: 0.7rem 22.4rem;
+  font-size: 1rem;
+  border: none;
+  color: #f7f7f7;
+  background: #06225f;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 14vh;
+  padding: 0.7rem calc((80vw - 1300px) / 2);
+}
+
+.footer-logo {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.footer-bg {
+  background-color: #06225f;
+}
+
+.made {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.footer-column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #06225f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 1200px) {
   .hero-container {
     grid-template-columns: 1fr;
   }
